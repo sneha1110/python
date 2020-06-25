@@ -1,0 +1,12 @@
+def roation():
+    arr= [int (x) for x in input()]
+    result= [0] * len(arr)
+    k=int(input('how many step '))
+    for i in range (len(arr)):
+        if i+k < len(arr):
+            result[i+k] = arr[i]
+        else:
+            new=(i+k) % len(arr)
+            result[new]=arr[i]
+    return result
+print(roation())
